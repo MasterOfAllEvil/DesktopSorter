@@ -11,6 +11,8 @@ The program will start by checking if the configuration file exists, if it does,
 As stated above, the configuration file contains all the rules for moving files. If a file does not match a rule, it will remain in the 'Sort' directory. The format of the rules are intended to be simple. The format is as follows:
 ```
 keyword = Destination
+suffix* = Destination
+*.prefix = Destination
 ```
 ## Future Rule Changes
 I intend to have a special operation for ignoring files before it moves them. Right now this can be done by adding the file name to the ignoredFiles array in DeskSort.py. I am considering making different implementations of configuration files, but the existing method will regardless. If you have specific type like XML, JSON, or SQLITE; make a feature request and I will look into it.
