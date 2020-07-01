@@ -1,0 +1,15 @@
+__pycache__/
+
+Default.cfg
+
+.idea/
+
+build/
+
+desktopsort.egg-info/
+
+dist/
+
+statemap.xmi
+
+desktopsorter.xmi
