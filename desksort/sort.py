@@ -1,4 +1,4 @@
-"Operations of DeskSorter"
+"""Operations of DeskSorter"""
 import os
 from os import path
 from desksort.config import Config
@@ -18,10 +18,10 @@ def create_config(file):
 
 
 class Sort(Config):
-    "Sorts using Config"
+    """Sorts using Config"""
 
     def __init__(self, file):
-        "Initializes with given config file"
+        """Initializes with given config file"""
         print(path.isfile(file))
         if not path.isfile(file):
             create_config(file)
@@ -29,7 +29,7 @@ class Sort(Config):
         super().__init__(file)
 
     def move_files(self):
-        "Move Files"
+        """Move Files"""
         # If Sort Folder does not exist, make folder
         if not path.exists('Sort'):
             os.mkdir('Sort')
@@ -56,7 +56,7 @@ class Sort(Config):
                         print("Ignored File Detected")
 
     def do_config(self):
-        "check for config"
+        """check for config"""
         if not path.isfile(self.name):
             create_config(self.name)
 
@@ -68,7 +68,7 @@ class Sort(Config):
             print(file)
             check = super().check_config(file)
             print(check)
-            if not check:
+            if check:
                 print("Found One: " + file)
                 if check[0] != "=":
                     print(str(check[0] + " is not an implemented operation."))
