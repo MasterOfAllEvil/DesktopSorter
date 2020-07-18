@@ -2,7 +2,7 @@
 This may use modules that only work on Windows at the present time. This repo has not been looked after for over 6 months and its content may not work.
 
 ## What is this?
-This repository contains a python program that could be used to sort files on a personal desktop. It currently will not work out of the box.
+This repository contains a python program that could be used to sort files on a personal desktop. It currently will not work out of the box. It is set up as a python package, may be uploaded to pypi at a later date.
 
 ## How does this work?
 The program will start by checking if the configuration file exists, if it does, it will move unsorted files to a folder titled 'Sort', then move the files within based on the rules defined in the config. Otherwise it will create a default configuration file and move the unsorted files to a folder titled 'Sort'.
